@@ -6,6 +6,7 @@ import Register from './pages/Register'; // Página de Registro
 import PetsPage from './pages/PetsPage'; // Página de todas las mascotas
 import GremlinPage from './pages/GremlinPage'; // Página de un gremlin específico
 import ProtectedRoute from './components/ProtectedRoute'; // Rutas protegidas
+import './global.css';
 
 function App() {
   return (

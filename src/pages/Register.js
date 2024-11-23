@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import "../register.css";
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -20,42 +21,47 @@ const Register = () => {
             localStorage.setItem('token', token);
 
             alert('User registered successfully. Now you can see your gremlins.');
-            navigate('/pets');
+            navigate('/login');
         } catch (error) {
             alert('Failure at registering. Try again.');
         }
     };
 
     return (
-        <div style={{ textAlign: 'center', marginTop: '50px' }}>
-            <h1>Register</h1>
+        <div className="register-container">
+          <div className="register-card">
+            <label className="register-label">USERNAME</label>
             <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                style={{ display: 'block', margin: '10px auto' }}
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="register-input"
             />
+
+            <label className="register-label">PASSWORD</label>
             <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                style={{ display: 'block', margin: '10px auto' }}
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="register-input"
             />
+
+            <label className="register-label">ROLE</label>
             <select
-                value={role}
-                onChange={(e) => setRole(e.target.value)}
-                style={{ display: 'block', margin: '10px auto' }}
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className="register-select"
             >
-                <option value="user">User</option>
-                <option value="admin">Admin</option>
+              <option value="user">USER</option>
+              <option value="admin">ADMIN</option>
             </select>
-            <button onClick={handleRegister} style={{ marginTop: '20px' }}>
-                Register
+
+            <button onClick={handleRegister} className="register-button">
+              REGISTER
             </button>
+          </div>
         </div>
-    );
-};
+      );
+    };
 
 export default Register;

@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pixel", Arial, sans-serif; /* Fuente pixelada */
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Cubre toda la pantalla */
+  background: none; /* Usa el fondo global */
+}
+
+.register-card {
+  background-color: #9400d3; /* Lila */
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra */
+  border-radius: 0; /* Bordes rectos */
+  width: 300px;
+}
+
+.register-label {
+  font-family: 'Press Start 2P', sans-serif; /* Fuente pixelada */
+  color: #39ff14; /* Verde neón */
+  font-size: 16px; /* Tamaño del texto */
+  display: block;
+  text-align: center; /* Alineado a la izquierda */
+  margin-bottom: 10px;
+}
+
+.register-input {
+  background-color: #39ff14; /* Verde neón */
+  border: none;
+  font-family: 'Press Start 2P', sans-serif;
+  color: #9400d3; /* Lila */
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 90%;
+  text-align: center;
+  font-size: 14px;
+}
+
+.register-select {
+  background-color: #39ff14; /* Verde neón */
+  border: none;
+  font-family: 'Press Start 2P', sans-serif;
+  color: #9400d3; /* Lila */
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  outline: none;
+}
+
+
+.register-button {
+  background-color: #39ff14; /* Verde neón */
+  color: #9400d3; /* Lila */
+  font-family: 'Press Start 2P', sans-serif; /* Fuente pixelada */
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.register-button:hover {
+  transform: scale(1.1); /* Efecto hover */
+  background-color: #7a00b3; /* Lila oscuro */
+}

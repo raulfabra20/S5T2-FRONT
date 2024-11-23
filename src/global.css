@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url('./assets/backgrounds/web-background.png');
+   background-size: 500px 500px; /* Ajusta el tamaño de la imagen */
+    background-repeat: repeat; /* Repite la imagen en ambos ejes */
+    background-position: top left; /* Empieza desde la esquina superior izquierda */
+     background-blend-mode: overplay;
+    height: 100vh; /* Cubre toda la pantalla */
+    width: 100%; /* A Hace que cubra toda la pantalla */
+}

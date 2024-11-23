@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Pixel", Arial, sans-serif; /* Usa una fuente pixelada si tienes */
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background: none; /* Deja que el fondo global se encargue */
+}
+
+.home-card {
+  background-color: #39ff14; /* Verde neón */
+  padding: 20px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+
+    /* Borde pixelado */
+    border: 20px solid transparent; /* Espesor del borde */
+    border-image-source: url('./assets/backgrounds/frame-card.png'); /* Ruta a la imagen del borde */
+    border-image-slice: 20; /* Ajusta según el diseño del borde */
+    border-radius: 0; /* Asegúrate de que los bordes sean rectos para mantener el estilo pixelado */
+}
+
+.home-title {
+  font-family: 'Press Start 2P', sans-serif; /* Aplica la fuente pixelada */
+    color: #8e44ad; /* Lila fuerte */
+    font-size: 40px; /* Ajusta según el diseño */
+    text-align: center;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px; /* Separación entre botones */
+  justify-content: center;
+}
+
+.home-button {
+  background-color: #9400d3; /* Lila fuerte */
+  color: #39ff14; /* verde neón */
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 20px; /* Tamaño del texto */
+  padding: 10px 20px; /* Tamaño del botón */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s; /* Efecto al pasar por encima */
+}
+
+.home-button:hover {
+  transform: scale(1.1); /* Efecto de agrandar */
+  background-color: #7a00b3; /* Color más oscuro al pasar por encima */
+}
