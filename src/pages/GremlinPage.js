@@ -31,6 +31,12 @@ const GremlinPage = () => {
         };
 
         fetchGremlin();
+
+        const interval = setInterval(() => {
+                fetchGremlin(); // Llamar al backend cada minuto
+            }, 60000); // Cada 60 segundos
+
+            return () => clearInterval(interval); // Limpiar el intervalo al desmontar el componente
     }, [petId]);
 
     const interactWithGremlin = async (action) => {

@@ -1,0 +1,80 @@
+.create-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: none; /* Usa el fondo global de la página */
+}
+
+.create-card {
+    background-color: #8A2BE2;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+}
+
+.create-title {
+    font-family: "Press Start 2P", sans-serif;
+    color: #39ff14;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-label {
+    font-family: "Press Start 2P", sans-serif;
+    color: fuchsia;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.form-input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 14px;
+    color: #8A2BE2;
+    background-color: fuchsia;
+    text-align: center;
+}
+
+.form-select {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 14px;
+    color: #8A2BE2;
+    background-color: fuchsia;
+    text-align: center;
+}
+
+.create-button {
+    margin-top: 20px;
+    padding: 20px 30px;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 20px;
+    color: #8A2BE2;
+    background-color: #39ff14;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create-button:hover {
+    transform: scale(1.1);
+    background-color: #2bff0a;
+}

@@ -5,35 +5,44 @@ import Login from './pages/Login'; // Página de Login
 import Register from './pages/Register'; // Página de Registro
 import PetsPage from './pages/PetsPage'; // Página de todas las mascotas
 import GremlinPage from './pages/GremlinPage'; // Página de un gremlin específico
+import CreatePage from './pages/CreatePage';
 import ProtectedRoute from './components/ProtectedRoute'; // Rutas protegidas
 import './global.css';
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route
-          path="/pets"
-          element={
-            <ProtectedRoute>
-              <PetsPage />
-            </ProtectedRoute>
-          }
-        />
-        <Route
-          path="/pets/:petId"
-          element={
-            <ProtectedRoute>
-              <GremlinPage />
-            </ProtectedRoute>
-          }
-        />
-      </Routes>
-    </Router>
-  );
-}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route
+            path="/pets"
+            element={
+              <ProtectedRoute>
+                <PetsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/pets/:petId"
+            element={
+              <ProtectedRoute>
+                <GremlinPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/create"
+            element={
+              <ProtectedRoute>
+                <CreatePage />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </Router>
+    );
+  }
 
-export default App;
+  export default App;

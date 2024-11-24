@@ -9,6 +9,23 @@
     background: none; /* Usa el fondo global */
 }
 
+.title-card {
+    background-color: #8A2BE2; /* Lila fuerte */
+    padding: 30px;
+    margin: 20px auto;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.title-text {
+    font-family: "Press Start 2P", sans-serif; /* Fuente pixelada */
+    color: #39ff14; /* Verde neón */
+    font-size: 35px;
+    margin: 0;
+}
+
 /* Tarjeta para "No gremlins yet" */
 .no-gremlins-card {
   background-color: #39ff14; /* Verde neón */
@@ -29,6 +46,12 @@
   color: #8e44ad; /* Lila */
   font-size: 24px; /* Incrementa el tamaño del texto */
     margin: 20px 0; /* Ajusta el espacio entre líneas */
+}
+
+.create-button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .create-button {
@@ -52,11 +75,13 @@
 /* Grid de tarjetas de mascotas */
 .pets-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 100%;
   max-width: 1200px;
   margin-top: 20px;
+  padding: 20px; /* Espaciado interno del contenedor */
+      justify-items: center; /* Centra las tarjetas horizontalmente */
 }
 
 /* Tarjeta de mascota */
@@ -68,7 +93,7 @@
     border-radius: 10px;
     position: relative; /* Necesario para que la imagen sobresalga */
     overflow: visible; /* Permite que la imagen sobresalga */
-    width: 250px; /* Ancho más grande */
+    width: 200px; /* Ancho más grande */
     height: 150px; /* Altura ajustada */
 }
 

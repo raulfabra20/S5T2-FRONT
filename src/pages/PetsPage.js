@@ -39,33 +39,47 @@ const PetsPage = () => {
     }
 
     return (
-            <div className="pets-container">
-                {pets.length === 0 ? (
-                    <div className="no-gremlins-card">
-                        <p className="no-gremlins-text">No gremlins yet</p>
-                        <p className="no-gremlins-text">Create one!</p>
-                        <button onClick={handleCreate} className="create-button">
-                            Create Gremlin
-                        </button>
-                    </div>
-                ) : (
-                    <div className="pets-grid">
-                        {pets.map((pet) => (
-                            <div className="pet-card" key={pet.petId}>
-                                <Link to={`/pets/${pet.petId}`}>
-                                    <GremlinImage
-                                        mood="happy"
-                                        type={pet.type.toLowerCase()}
-                                        color={pet.color.toLowerCase()}
-                                        className="pet-image"
-                                    />
-                                    <p className="pet-name">{pet.name}</p>
-                                </Link>
-                            </div>
-                        ))}
-                    </div>
-                )}
-            </div>
-        );
+             <div className="pets-container">
+                    {pets.length === 0 ? (
+                        <div className="no-gremlins-card">
+                            <p className="no-gremlins-text">No gremlins yet</p>
+                            <p className="no-gremlins-text">Create one!</p>
+                            <button onClick={handleCreate} className="create-button">
+                                Create Gremlin
+                            </button>
+                        </div>
+                    ) : (
+                        <>
+                           {/* Tarjeta para el título */}
+                                           <div className="title-card">
+                                               <h1 className="title-text">My Gremlins</h1>
+                                           </div>
+
+                                           {/* Grid de mascotas */}
+                                           <div className="pets-grid">
+                                               {pets.map((pet) => (
+                                                   <div className="pet-card" key={pet.petId}>
+                                                       <Link to={`/pets/${pet.petId}`}>
+                                                           <GremlinImage
+                                                               mood="happy"
+                                                               type={pet.type.toLowerCase()}
+                                                               color={pet.color.toLowerCase()}
+                                                               className="pet-image"
+                                                           />
+                                                           <p className="pet-name">{pet.name}</p>
+                                                       </Link>
+                                                   </div>
+                                               ))}
+                                           </div>
+                                            {/* Botón "Create" */}
+                                                           <div className="create-button-container">
+                                                               <button onClick={handleCreate} className="create-button">
+                                                                   Create New Gremlin
+                                                               </button>
+                                                           </div>
+                                       </>
+                                   )}
+                               </div>
+                           );
     };
 export default PetsPage;
